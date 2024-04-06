@@ -12,6 +12,7 @@ resource "libvirt_domain" "kvm_node" {
 
   network_interface {
     network_id     = var.libvirt_network.id
+    wait_for_lease = false
   }
 
   console {

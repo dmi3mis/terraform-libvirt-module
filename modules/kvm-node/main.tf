@@ -5,7 +5,7 @@ resource "libvirt_domain" "kvm_node" {
   memory = var.memory
   vcpu   = var.vcpu
 
-  qemu_agent = true
+  qemu_agent = false
   autostart  = true
 
   cloudinit = libvirt_cloudinit_disk.commoninit.id
